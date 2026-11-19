@@ -1,11 +1,232 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Advisor & Mobile Setup - Smart Smartphone & Accessory Guide</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+/* ===== AI Advisor & Mobile Setup — Main Stylesheet ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: #f8f9fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 24px 20px;
+}
+
+/* HEADER & NAV */
+.site-header {
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #0a2540;
+    font-weight: 700;
+    font-size: 1.15rem;
+}
+.brand-logo .highlight { color: #0070f3; }
+.logo-icon { font-size: 1.5rem; }
+
+.main-nav ul {
+    display: flex;
+    gap: 8px;
+    list-style: none;
+}
+.main-nav a {
+    text-decoration: none;
+    color: #616e7c;
+    font-size: 0.88rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: .2s;
+}
+.main-nav a:hover { background: #f0f4ff; color: #0070f3; }
+.main-nav a.active { background: #0070f3; color: #fff; }
+
+/* HERO SECTION */
+.hero-section {
+    text-align: center;
+    padding: 50px 20px 40px;
+    background: linear-gradient(135deg, #f0f4ff 0%, #e8f0fe 100%);
+    border-radius: 16px;
+    margin-bottom: 32px;
+}
+.hero-section h1 {
+    font-size: 2rem;
+    color: #0a2540;
+    margin-bottom: 12px;
+}
+.hero-section .subtitle {
+    color: #616e7c;
+    font-size: 1rem;
+    max-width: 650px;
+    margin: 0 auto 24px;
+}
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 11px 24px;
+    background: #0070f3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: .2s;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover { background: #005ed1; transform: translateY(-1px); }
+.btn-secondary {
+    background: #fff;
+    color: #0070f3;
+    border: 2px solid #0070f3;
+}
+.btn-secondary:hover { background: #f0f4ff; }
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 16px;
+}
+
+/* FEATURES GRID */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-bottom: 32px;
+}
+.feature-card {
+    background: #fff;
+    border: 1px solid #e8ecf0;
+    border-radius: 14px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: .2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,.04);
+}
+.feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+.feature-card h3 {
+    font-size: 1.05rem;
+    color: #0a2540;
+    margin-bottom: 10px;
+}
+.feature-card p {
+    color: #616e7c;
+    font-size: 0.88rem;
+    line-height: 1.6;
+}
+
+/* CONTENT BOX */
+.content-box {
+    background: #fff;
+    border: 1px solid #e8ecf0;
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.04);
+}
+.content-box h2 {
+    font-size: 1.3rem;
+    color: #0a2540;
+    margin-bottom: 10px;
+}
+
+/* STEPS */
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+.step-card {
+    background: #f8f9fb;
+    border-radius: 12px;
+    padding: 20px;
+    position: relative;
+    border: 1px solid #e8ecf0;
+}
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background: #0070f3;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+.site-footer {
+    background: #0a2540;
+    color: #8a94a6;
+    text-align: center;
+    padding: 24px 20px;
+    margin-top: 40px;
+    font-size: 0.85rem;
+}
+.footer-nav {
+    margin-bottom: 10px;
+}
+.footer-nav a {
+    color: #8a94a6;
+    text-decoration: none;
+    margin: 0 6px;
+    font-size: 0.85rem;
+}
+.footer-nav a:hover { color: #fff; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-container { flex-direction: column; gap: 12px; }
+    .main-nav ul { flex-wrap: wrap; justify-content: center; }
+    .hero-section h1 { font-size: 1.5rem; }
+    .features-grid { grid-template-columns: 1fr; }
+    .steps-container { grid-template-columns: 1fr; }
+}
+    </style>
 </head>
 <body>
 
@@ -48,7 +269,6 @@
             <h2 style="font-size: 1.4rem; color: #0a2540; margin-bottom: 16px;">Core Features</h2>
             <div class="features-grid">
 
-                <!-- Feature 1 -->
                 <div class="feature-card">
                     <div>
                         <div class="feature-icon">📲</div>
@@ -60,7 +280,6 @@
                     <a href="{% url 'recommendation' %}" class="btn btn-block">Explore Recommendations &rarr;</a>
                 </div>
 
-                <!-- Feature 2 -->
                 <div class="feature-card">
                     <div>
                         <div class="feature-icon">🔌</div>
@@ -72,7 +291,6 @@
                     <a href="{% url 'accessories' %}" class="btn btn-block">Plan Accessories &rarr;</a>
                 </div>
 
-                <!-- Feature 3 -->
                 <div class="feature-card">
                     <div>
                         <div class="feature-icon">🤖</div>
