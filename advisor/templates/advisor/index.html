@@ -1,0 +1,136 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Advisor & Mobile Setup - Smart Smartphone & Accessory Guide</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="site-header">
+        <div class="nav-container">
+            <a href="{% url 'home' %}" class="brand-logo">
+                <div class="logo-icon">📱</div>
+                <span>AI Advisor & <span class="highlight">Mobile Setup</span></span>
+            </a>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="{% url 'home' %}" class="active">Home</a></li>
+                    <li><a href="{% url 'recommendation' %}">Mobile Recommendation</a></li>
+                    <li><a href="{% url 'accessories' %}">Accessories</a></li>
+                    <li><a href="{% url 'ai_agent' %}">AI Mobile Agent</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1>Welcome to AI Advisor & Mobile Setup</h1>
+            <p class="subtitle">
+                Your clean, all-in-one assistant for finding the right smartphone, fitting the best accessories inside your budget, and answering all mobile hardware questions.
+            </p>
+            <div class="hero-actions">
+                <a href="{% url 'recommendation' %}" class="btn">Find Best Mobile</a>
+                <a href="{% url 'accessories' %}" class="btn btn-secondary">Explore Accessories</a>
+                <a href="{% url 'ai_agent' %}" class="btn btn-secondary">Chat with AI Agent</a>
+            </div>
+        </section>
+
+        <!-- 3 Main Core Features -->
+        <section>
+            <h2 style="font-size: 1.4rem; color: #0a2540; margin-bottom: 16px;">Core Features</h2>
+            <div class="features-grid">
+
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div>
+                        <div class="feature-icon">📲</div>
+                        <h3>1. Mobile Recommendation</h3>
+                        <p>
+                            Enter your budget, pick your primary usage (Gaming, Camera, Normal Use, or Study), and choose your preferred processor. Instantly view top smartphones with full hardware specifications and the best pick highlighted.
+                        </p>
+                    </div>
+                    <a href="{% url 'recommendation' %}" class="btn btn-block">Explore Recommendations &rarr;</a>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div>
+                        <div class="feature-icon">🔌</div>
+                        <h3>2. Best Accessories Recommendation</h3>
+                        <p>
+                            Smartly bundle essential accessories using the remaining budget after your smartphone purchase. Includes screen guard, cover, stand, charger, earphones, and power bank with clear itemized pricing.
+                        </p>
+                    </div>
+                    <a href="{% url 'accessories' %}" class="btn btn-block">Plan Accessories &rarr;</a>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div>
+                        <div class="feature-icon">🤖</div>
+                        <h3>3. AI Mobile Agent</h3>
+                        <p>
+                            Dedicated smartphone AI chatbot ready to answer technical queries on gaming benchmarks, camera sensors, Snapdragon vs Dimensity processors, battery life, and tailored budget comparisons.
+                        </p>
+                    </div>
+                    <a href="{% url 'ai_agent' %}" class="btn btn-block">Talk to AI Agent &rarr;</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="content-box">
+            <h2>How It Works</h2>
+            <p style="color: #616e7c; margin-bottom: 14px;">
+                Designed to make smartphone buying and setup effortless for students and everyday users in 4 simple steps:
+            </p>
+            <div class="steps-container">
+                <div class="step-card">
+                    <span class="step-number">1</span>
+                    <h4 style="color: #0a2540; margin-bottom: 6px;">Set Budget & Need</h4>
+                    <p style="color: #616e7c; font-size: 0.88rem;">Specify your maximum price, preferred processor, and primary usage like gaming, study, or camera.</p>
+                </div>
+                <div class="step-card">
+                    <span class="step-number">2</span>
+                    <h4 style="color: #0a2540; margin-bottom: 6px;">Compare Top Phones</h4>
+                    <p style="color: #616e7c; font-size: 0.88rem;">Review curated smartphones with processor, RAM, storage, camera, and battery specs side-by-side.</p>
+                </div>
+                <div class="step-card">
+                    <span class="step-number">3</span>
+                    <h4 style="color: #0a2540; margin-bottom: 6px;">Bundle Accessories</h4>
+                    <p style="color: #616e7c; font-size: 0.88rem;">Select daily essentials (screen guard, cover, charger, power bank) without exceeding your leftover budget.</p>
+                </div>
+                <div class="step-card">
+                    <span class="step-number">4</span>
+                    <h4 style="color: #0a2540; margin-bottom: 6px;">Consult Mobile AI</h4>
+                    <p style="color: #616e7c; font-size: 0.88rem;">Have doubts about gaming FPS or camera sensors? Ask our specialized mobile AI assistant anytime.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container" style="padding: 0;">
+            <div class="footer-nav">
+                <a href="{% url 'home' %}">Home</a> &bull;
+                <a href="{% url 'recommendation' %}">Mobile Recommendation</a> &bull;
+                <a href="{% url 'accessories' %}">Accessories</a> &bull;
+                <a href="{% url 'ai_agent' %}">AI Mobile Agent</a>
+            </div>
+            <p>&copy; 2026 AI Advisor & Mobile Setup. Full-Stack Python Django & MySQL College Project.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
